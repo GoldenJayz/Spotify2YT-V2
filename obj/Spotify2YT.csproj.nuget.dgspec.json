@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jmdan\\Desktop\\Persona\\Coding\\2022\\Spotify2YT\\Spotify2YT.csproj": {}
+    "C:\\Users\\jadendaniels\\Source\\Repos\\Spotify2YT-V2\\Spotify2YT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jmdan\\Desktop\\Persona\\Coding\\2022\\Spotify2YT\\Spotify2YT.csproj": {
+    "C:\\Users\\jadendaniels\\Source\\Repos\\Spotify2YT-V2\\Spotify2YT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jmdan\\Desktop\\Persona\\Coding\\2022\\Spotify2YT\\Spotify2YT.csproj",
+        "projectUniqueName": "C:\\Users\\jadendaniels\\Source\\Repos\\Spotify2YT-V2\\Spotify2YT.csproj",
         "projectName": "Spotify2YT",
-        "projectPath": "C:\\Users\\jmdan\\Desktop\\Persona\\Coding\\2022\\Spotify2YT\\Spotify2YT.csproj",
-        "packagesPath": "C:\\Users\\jmdan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jmdan\\Desktop\\Persona\\Coding\\2022\\Spotify2YT\\obj\\",
+        "projectPath": "C:\\Users\\jadendaniels\\Source\\Repos\\Spotify2YT-V2\\Spotify2YT.csproj",
+        "packagesPath": "C:\\Users\\jadendaniels\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jadendaniels\\Source\\Repos\\Spotify2YT-V2\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jmdan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jadendaniels\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +39,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "SpotifyAPI.Web": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            },
+            "SpotifyAPI.Web.Auth": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

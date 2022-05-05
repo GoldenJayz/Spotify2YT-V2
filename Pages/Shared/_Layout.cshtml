@@ -25,13 +25,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-page="/Converter">Converter</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    @if (ViewData["Title"] == "Home page")
+    @if ((string) ViewData["Title"] == "Home page")
     {
         <div class="main-image p-0 m-0">
 
