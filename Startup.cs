@@ -1,9 +1,16 @@
+using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Identity;
+using SpotifyAPI.Web;
+using static SpotifyAPI.Web.Scopes;
+
 
 namespace Spotify2YT
 {
@@ -19,8 +26,45 @@ namespace Spotify2YT
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication()
-                .AddSpotify();
+            services.AddHttpContextAccessor();
+            services.AddSingleton(SpotifyClientConfig.CreateDefault());
+            services.AddScoped<SpotifyClientBuilder>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Spotify", policy =>
+                {
+                    policy.AuthenticationSchemes.Add("Spotify");
+                    policy.RequireAuthenticatedUser();
+                });
+            });
+            services
+              .AddAuthentication(options =>
+              {
+                  options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+              })
+              .AddCookie(options =>
+              {
+                  options.ExpireTimeSpan = TimeSpan.FromMinutes(50);
+              })
+              .AddSpotify(options =>
+              {
+                  options.ClientId = Configuration["SPOTIFY_CLIENT_ID"];
+                  options.ClientSecret = Configuration["SPOTIFY_CLIENT_SECRET"];
+                  options.CallbackPath = "/Auth/callback";
+                  options.SaveTokens = true;
+
+                  var scopes = new List<string> {
+            UserReadEmail, UserReadPrivate, PlaylistReadPrivate, PlaylistReadCollaborative
+                };
+                  options.Scope.Add(string.Join(",", scopes));
+              });
+            services.AddRazorPages()
+              .AddRazorPagesOptions(options =>
+              {
+                  options.Conventions.AuthorizeFolder("/", "Spotify");
+              });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
