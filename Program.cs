@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using SpotifyAPI.Web;
-using System;
-using System.Threading.Tasks;
 
 namespace Spotify2YT
 {
@@ -18,6 +16,10 @@ namespace Spotify2YT
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                })
+                .ConfigureAppConfiguration((httpContext, builder) =>
+                {
+                    builder.AddUserSecrets<Program>();
                 });
     }
 }

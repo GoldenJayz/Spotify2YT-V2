@@ -38,3 +38,11 @@ C:\Users\jmdan\Desktop\Persona\Coding\2022\Spotify2YT\obj\Debug\net5.0\ref\Spoti
 C:\Users\jmdan\Desktop\Persona\Coding\2022\Spotify2YT\obj\Debug\net5.0\Spotify2YT.pdb
 C:\Users\jmdan\Desktop\Persona\Coding\2022\Spotify2YT\obj\Debug\net5.0\Spotify2YT.genruntimeconfig.cache
 C:\Users\jmdan\Desktop\Persona\Coding\2022\Spotify2YT\obj\Debug\net5.0\Spotify2YT.csproj.CopyComplete
+C:\Users\jadendaniels\Source\Repos\Spotify2YT-V2\obj\Debug\net5.0\Spotify2YT.csproj.AssemblyReference.cache
+C:\Users\jadendaniels\Source\Repos\Spotify2YT-V2\obj\Debug\net5.0\Spotify2YT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jadendaniels\Source\Repos\Spotify2YT-V2\obj\Debug\net5.0\Spotify2YT.AssemblyInfoInputs.cache
+C:\Users\jadendaniels\Source\Repos\Spotify2YT-V2\obj\Debug\net5.0\Spotify2YT.AssemblyInfo.cs
+C:\Users\jadendaniels\Source\Repos\Spotify2YT-V2\obj\Debug\net5.0\Spotify2YT.csproj.CoreCompileInputs.cache
+C:\Users\jadendaniels\Source\Repos\Spotify2YT-V2\obj\Debug\net5.0\Spotify2YT.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jadendaniels\Source\Repos\Spotify2YT-V2\obj\Debug\net5.0\Spotify2YT.RazorAssemblyInfo.cache
+C:\Users\jadendaniels\Source\Repos\Spotify2YT-V2\obj\Debug\net5.0\Spotify2YT.RazorAssemblyInfo.cs
